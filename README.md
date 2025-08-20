@@ -55,8 +55,23 @@ asyncio.run(main())
 Before you can connect to IDrive e2 with standard S3 tools,  
 you must call the **Get Region Endpoint** API to determine the correct regional endpoint.  
 
-This client wraps that step into a reusable Python package with simple, async methods.
+This client wraps that step into a reusable Python package with a simple, async method.
 
+---
+
+## Installation
+
+```bash
+pip install idrive-e2-client
+```
+
+### For development
+
+```bash
+git clone https://github.com/patrickvorgers/idrive-e2-client.git
+cd idrive-e2-client
+pip install -e .[dev]
+```
 ---
 
 ## API
@@ -78,9 +93,9 @@ The returned string is normalized to include a scheme (e.g., `https://...`).
 
 ## Exceptions
 
-- `InvalidAuth` → credentials not valid  
-- `CannotConnect` → API not reachable or bad response  
-- `IDriveE2Error` → base class for all errors  
+- `InvalidAuth` -> credentials not valid  
+- `CannotConnect` -> API not reachable or bad response  
+- `IDriveE2Error` -> base class for all errors  
 
 ---
 
